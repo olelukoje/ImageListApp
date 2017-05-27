@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ImagesListApp</string>
+    <string name="add_to_favorite">В избранное</string>
+    <string name="is_favorite">Избранное</string>
+    <string name="add_description_btn">Добавить</string>
+    <string name="add_description_et">Добавить описание</string>
+    <string name="no_internet">Подключите Интернет, чтобы загрузить изображения</string>
+    <string name="images_saved">Изображения успешно сохранены во внутреннем хранилище</string>
+    <string name="favorite_only">Только избранное</string>
+</resources>
