@@ -12,4 +12,6 @@ public interface MainView {
 
     void changeView(ArrayList<Image> items);
     void setMessage(String message);
+    void showProgress();
+    void hideProgress();
 }

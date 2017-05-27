@@ -5,7 +5,9 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements MainView,
 
     @BindView(R.id.recycler_view) RecyclerView recyclerView;
     @BindView(R.id.favorite_only_btn) ToggleButton favoriteOnlyBtn;
+    @BindView(R.id.progress_bar) ProgressBar progressBar;
 
     private ListAdapter listAdapter;
     private MainPresenter mainPresenter;
@@ -48,6 +51,16 @@ public class MainActivity extends AppCompatActivity implements MainView,
     @Override public void onResume() {
         super.onResume();
         mainPresenter.onResume();
+    }
+
+    public void showProgress() {
+        progressBar.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.INVISIBLE);
+    }
+
+    public void hideProgress() {
+        progressBar.setVisibility(View.INVISIBLE);
+        recyclerView.setVisibility(View.VISIBLE);
     }
 
     @Override

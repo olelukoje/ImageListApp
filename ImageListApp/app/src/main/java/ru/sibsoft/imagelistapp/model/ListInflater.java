@@ -30,7 +30,8 @@ public class ListInflater {
     public final static String links[] = {
             "https://static.pexels.com/photos/2946/dawn-nature-sunset-trees.jpg",
             "https://static.pexels.com/photos/4700/nature-forest-moss-leaves.jpg",
-            "https://lh6.googleusercontent.com/-iAs-IPZyxy8/AAAAAAAAAAI/AAAAAAAAA7E/phqi_--xdV4/s0-c-k-no-ns/photo.jpg"
+            "https://lh6.googleusercontent.com/-iAs-IPZyxy8/AAAAAAAAAAI/AAAAAAAAA7E/phqi_" +
+                    "--xdV4/s0-c-k-no-ns/photo.jpg"
     };
 
     public ListInflater(FinishedListener listener, Context context) {

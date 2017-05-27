@@ -37,6 +37,7 @@ public class MainPresenterImpl implements MainPresenter, FinishedListener {
     public void onResume() {
         mainView.changeView(listInflater.getList());
         if (isNetworkAvailable()) {
+            mainView.showProgress();
             listInflater.loadBitmapFromUrl();
         } else {
             if (SharedPreferencesManager.getString(context,
@@ -65,6 +66,7 @@ public class MainPresenterImpl implements MainPresenter, FinishedListener {
     @Override
     public void onDownloadFinished(ArrayList<Image> list) {
         mainView.changeView(list);
+        mainView.hideProgress();
     }
 
     @Override
